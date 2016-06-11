@@ -1,0 +1,287 @@
+
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+var st1,st2,st3,st4;
+$(".cube").hover(function(){
+$(this).css({"transition":"0.8s all","transform":"rotateX(180deg) rotateY(180deg) scale(1.2)"});
+},function(){
+$(this).css({"transition":"0.8s all","transform":"rotateX(0deg) rotateY(0deg) scale(0.8)"});
+
+});
+$("#c1").hover(function(){
+clearTimeout(st1);
+$(".facea").css({"background": "rgba(219,10,91, 0.8)"});
+$(".flasha").css({"transform": "translateY(110px)"});
+$("#c2").css({"transition":"4s all ease-out","transform": "translateY(100px) translateX(100px)  scale(0.8)"});
+$("#c3").css({"transition":"4s all ease-out","transform": "translateY(100px) translateX(-100px) scale(0.8)"});
+$("#c4").css({"transition":"4s all ease-out","transform": "translateY(-10px) translateX(200px) scale(0.8)"});
+st1=setTimeout(function(){
+$("#d1").css({"opacity": "1","width":"300px"});
+},800);
+},function(){
+clearTimeout(st1);
+$("#d1").css({"opacity": "0","width":"0px"});
+$(".facea").css({"background": "rgba(0, 0, 0, 0)"});
+$(".flasha").css({"transform": "translateY(-30px)"});
+$("#c2").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c3").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c4").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+});
+$("#c2").hover(function(){
+clearTimeout(st2);
+$(".faceb").css({"background": "rgba(219,10,91, 0.8)"});
+$(".flashb").css({"transform": "translateY(110px)"});
+$("#c1").css({"transition":"4s all ease-out","transform": "translateY(-100px) translateX(-100px) scale(0.8)"});
+$("#c3").css({"transition":"4s all ease-out","transform": "translateY(-10px) translateX(-200px) scale(0.8)"});
+$("#c4").css({"transition":"4s all ease-out","transform": "translateY(-100px) translateX(50px) scale(0.8)"});
+st2=setTimeout(function(){
+$("#d2").css({"opacity": "1","width":"300px"});
+},800);
+},function(){
+clearTimeout(st2);
+$("#d2").css({"opacity": "0","width":"0px"});
+$(".faceb").css({"background": "rgba(0, 0, 0, 0)"});
+$(".flashb").css({"transform": "translateY(-30px)"});
+$("#c1").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c3").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c4").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+});
+
+$("#c3").hover(function(){
+clearTimeout(st3);
+$(".facec").css({"background": "rgba(219,10,91, 0.8)"});
+$(".flashc").css({"transform": "translateY(110px)"});
+$("#c1").css({"transition":"4s all ease-out","transform": "translateY(-100px) translateX(100px) scale(0.8)"});
+$("#c2").css({"transition":"4s all ease-out","transform": "translateY(100px) translateX(100px) scale(0.8)"});
+$("#c4").css({"transition":"4s all ease-out","transform": "translateY(-100px) translateX(100px) scale(0.8)"});
+st3=setTimeout(function(){
+$("#d3").css({"opacity": "1","width":"300px"});
+},800);
+},function(){
+clearTimeout(st3);
+$("#d3").css({"opacity": "0","width":"0px"});
+$(".facec").css({"background": "rgba(0, 0, 0, 0)"});
+$(".flashc").css({"transform": "translateY(-30px)"});
+$("#c1").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c2").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c4").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+});
+$("#c4").hover(function(){
+clearTimeout(st4);
+$(".faced").css({"background": "rgba(219,10,91, 0.8)"});
+$(".flashd").css({"transform": "translateY(110px)"});
+$("#c1").css({"transition":"4s all ease-out","transform": "translateY(10px) translateX(-100px) scale(0.8)"});
+$("#c2").css({"transition":"4s all ease-out","transform": "translateY(100px) translateX(-100px) scale(0.8)"});
+$("#c3").css({"transition":"4s all ease-out","transform": "translateY(100px) translateX(-100px) scale(0.8)"});
+st4=setTimeout(function(){
+$("#d4").css({"opacity": "1","width":"300px"});
+},800);
+},function(){
+clearTimeout(st4);
+$("#d4").css({"opacity": "0","width":"0px"});
+$(".faced").css({"background": "rgba(0, 0, 0, 0)"});
+$(".flashd").css({"transform": "translateY(-30px)"});
+$("#c1").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c2").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+$("#c3").css({"transition":"4s all ease-out","transform": "translateY(0px) translateX(0px) scale(0.8)"});
+});
+
+
+});
+</script>
+<style>
+@font-face{
+font-family:font1;
+src:url("font/vfont4.otf");
+}
+@font-face{
+font-family:font2;
+src:url("font/vfont2.ttf");
+}
+
+@keyframes float{
+0%{transform:translateY(0px) translateZ(0px);}
+25%{transform:translateY(-100px) translateZ(100px);}
+100%{transform:translateY(0px;) translateZ(0px)}
+}
+
+body{
+background-color:#000;
+font-family:font1;
+overflow:hidden;
+}
+.screen{perspective: 2000px;
+width:100%;
+height:100%;
+position:absolute;
+}
+.cube{
+width:100px;
+height:100px;
+position:absolute;
+transition:0.8s all;
+transform-style:preserve-3d;
+perspective:1000px;
+transform:rotateX(0deg) rotateY(0deg) scale(0.8);
+cursor:pointer;
+}
+.face{
+overflow:hidden;
+width:100px;
+height:100px;
+position:absolute;
+border:3px solid #DB0A5B;
+transition:0.8s all;
+}
+#f5{
+transform:translateY(-50px) rotateX(90deg);}
+#f6{
+transform:translateY(50px) rotateX(90deg);}
+#f4{
+transform:translateZ(-50px) rotateX(0deg);}
+#f3{
+transform:translateX(-50px) rotateY(90deg);}
+#f2{
+transform:translateX(50px) rotateY(90deg);}
+#f1{
+transform:translateZ(50px) rotateY(0deg);}
+.flash{
+transform:translateY(-30px);
+transition:0.4s all;}
+#c1{
+left:40%;
+margin-top:10%;
+
+}
+#c2{
+left:50%;
+margin-top:30%;
+}
+#c3{
+left:30%;
+margin-top:30%;
+}
+#c4{
+left:60%;
+margin-top:10%;
+}
+.evehold{
+perspective:3000px;
+
+transform-style:preserve-3d;}
+.desc{
+color:#DB0A5B;
+font-size:30px;
+font-family:font1;
+position:absolute;
+left:-400px;
+transform:rotate(180deg);
+opacity:0;
+transition:0.5s opacity;
+width:0px;
+overflow:hidden;
+}
+.head1{
+width:600px;
+height:60px;
+left:100px;
+position:absolute;
+transition:0.7s all;
+}
+</style>
+<body>
+<div class="screen">
+<div class="evehold">
+<div class="cube" id="c1">
+<div class="face facea" id="f1">
+<div class="flash flasha" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facea" id="f2">
+<div class="flash flasha" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facea" id="f3">
+<div class="flash flasha" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facea" id="f4">
+<div class="flash flasha" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facea" id="f5">
+<div class="flash flasha" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facea" id="f6">
+<div class="flash flasha" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="desc" id="d1">Hate you because you ruined my life</div>
+</div>
+<div class="cube" id="c2">
+<div class="face faceb" id="f1">
+<div class="flash flashb" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faceb" id="f2">
+<div class="flash flashb" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faceb" id="f3">
+<div class="flash flashb" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faceb" id="f4">
+<div class="flash flashb" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faceb" id="f5">
+<div class="flash flashb" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faceb" id="f6">
+<div class="flash flashb" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="desc" id="d2">Hate you beyond infinity<br></div>
+</div>
+<div class="cube" id="c3">
+<div class="face facec" id="f1">
+<div class="flash flashc" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facec" id="f2">
+<div class="flash flashc" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facec" id="f3">
+<div class="flash flashc" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facec" id="f4">
+<div class="flash flashc" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facec" id="f5">
+<div class="flash flashc" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face facec" id="f6">
+<div class="flash flashc" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="desc" id="d3">Killed Me? Now I'll haunt you<br></div>
+</div>
+<div class="cube" id="c4">
+<div class="face faced" id="f1">
+<div class="flash flashd" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faced" id="f2">
+<div class="flash flashd" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faced" id="f3">
+<div class="flash flashd" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faced" id="f4">
+<div class="flash flashd" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faced" id="f5">
+<div class="flash flashd" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="face faced" id="f6">
+<div class="flash flashd" style="width:200px;height:30px;background-color:#fff;"></div>
+</div>
+<div class="desc" id="d4">Hate is better motivator than Love<br></div>
+</div>
+</div>
+<div class="head1">
+<a style="text-decoration:none;color:#DB0A5B;position:absolute;font-family:font1;font-size:50px;" href="cube.html">hate
+<p style="font-size:20px;">click on the cubes to see what happens</p></a>
+</div>
+</div>
+
+</body>
